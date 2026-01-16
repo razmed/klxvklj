@@ -1,0 +1,990 @@
+/* ====================
+   SNTP ANABIBE - PALETTE SNTP 100%
+==================== */
+
+:root {
+  /* Palette SNTP Officielle */
+  --sntp-red-darker: #5A000D;
+  --sntp-red-dark: #810012;
+  --sntp-red: #C1121F;
+  --sntp-red-light: #D32F2F;
+  
+  --sntp-black: #0D1B2A;
+  --sntp-gray-darkest: #1B263B;
+  --sntp-gray-dark: #415A77;
+  --sntp-gray: #778DA9;
+  --sntp-gray-light: #B0C4DE;
+  --sntp-gray-lighter: #E0E1DD;
+  --sntp-gray-lightest: #F5F5F5;
+  
+  --sntp-white: #FFFFFF;
+  --sntp-text-dark: #2C2C2C;
+  
+  /* Spécifique Anabibe (couleur secondaire pour contraste) */
+  --anabibe-accent: #FF5E14; /* Gardé pour certains éléments graphiques */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: 'Open Sans', Sans-serif;
+  color: var(--sntp-gray-dark);
+  line-height: 1.6;
+}
+
+.Anabibe-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.Anabibe-container-full {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ====================
+   HERO SECTION
+==================== */
+.Anabibe-hero-section {
+  position: relative;
+  min-height: 650px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -115px;
+  overflow: hidden;
+}
+
+.Anabibe-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(360deg, var(--sntp-black) 0%, rgba(27, 38, 59, 0.88) 100%);
+  z-index: 1;
+}
+
+.Anabibe-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: var(--sntp-white);
+  max-width: 900px;
+  padding-top: 6em;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Anabibe-hero-subtitle {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #FFFEFE;
+  margin-bottom: 1em;
+}
+
+.Anabibe-hero-logo {
+  max-width: 73%;
+  margin-bottom: 1em;
+}
+
+.Anabibe-hero-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Anabibe-hero-title {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 3.3em;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin-bottom: 0.3em;
+  letter-spacing: 1px;
+}
+
+.Anabibe-hero-divider {
+  width: 381px;
+  height: 3.3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--sntp-red) 0px,
+    var(--sntp-red) 12.2px,
+    transparent 12.2px,
+    transparent 18.7px
+  );
+  margin: 15px 0 20px 0;
+  max-width: 100%;
+}
+
+.Anabibe-hero-description {
+  font-family: 'Open Sans', Sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #FFFFFF;
+  max-width: 750px;
+}
+
+/* ====================
+   SECTION EXPERTISE (Innovation + Durabilité)
+==================== */
+.Anabibe-expertise-section {
+  background-color: var(--sntp-white);
+  padding: 32px;
+  position: relative;
+  z-index: 5;
+  margin-top: 5px;
+}
+
+.Anabibe-expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: self-start;
+  position: relative;
+  z-index: 10;
+}
+
+.Anabibe-expertise-card {
+  background-color: #FFFFFF;
+  padding: 3em 2em;
+  text-align: left;
+  /* CORRECTION : Ombre légère et propre */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+  border-top: 3px solid var(--sntp-red);
+  transition: all 0.3s ease;
+}
+
+.Anabibe-expertise-card:hover {
+  box-shadow: 0px 15px 40px rgba(193, 18, 31, 0.12);
+  transform: translateY(-5px);
+}
+
+.Anabibe-expertise-label {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--sntp-gray);
+  margin-bottom: 0.3em;
+}
+
+.Anabibe-expertise-title {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--sntp-text-dark);
+  margin-bottom: 0.3em;
+}
+
+.Anabibe-expertise-divider {
+  width: 214px;
+  height: 3.3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--sntp-red) 0px,
+    var(--sntp-red) 12.2px,
+    transparent 12.2px,
+    transparent 18.7px
+  );
+  margin: 15px 0 20px 0;
+  max-width: 100%;
+}
+
+.Anabibe-expertise-description {
+  font-family: 'Open Sans', Sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: var(--sntp-gray-dark);
+}
+
+.Anabibe-expertise-image-center {
+  width: 320px;
+  height: 373px;
+  margin: -1em 0 -10em;
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.Anabibe-expertise-image-center img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ====================
+   SECTION SOLUTIONS TECHNIQUES
+==================== */
+.Anabibe-solutions-section {
+  background-color: var(--sntp-gray-lightest);
+  padding: 100px 0;
+}
+
+.Anabibe-solutions-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4em;
+  align-items: flex-start;
+}
+
+.Anabibe-solutions-text {
+  padding: 2em 0;
+}
+
+.Anabibe-solutions-title {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--sntp-text-dark);
+  margin-bottom: 1.5em;
+  line-height: 1.2;
+}
+
+.Anabibe-solutions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  background-color: var(--sntp-red);
+  color: var(--sntp-white);
+  padding: 0.7em 1.8em;
+  text-decoration: none;
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.Anabibe-solutions-btn:hover {
+  background-color: var(--sntp-red-dark);
+  transform: translateY(-2px);
+}
+
+.Anabibe-solutions-btn .btn-icon {
+  font-size: 1em;
+}
+
+.Anabibe-solutions-cards-wrapper {
+  background-color: var(--sntp-white);
+  padding: 2em;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Anabibe-solutions-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+.Anabibe-solution-feature-card {
+  text-align: left;
+}
+
+.Anabibe-feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sntp-red);
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.Anabibe-feature-title {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--sntp-text-dark);
+  margin-bottom: 0.5em;
+}
+
+.Anabibe-feature-description {
+  font-family: 'Open Sans', Sans-serif;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  color: var(--sntp-gray-dark);
+}
+
+/* ====================
+   SECTIONS ALTERNÉES (Rouge / Navy)
+==================== */
+
+/* Parc Industriel Performant */
+.Anabibe-industrial-section {
+  background-color: var(--sntp-white);
+  padding: 0;
+}
+
+.Anabibe-industrial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.Anabibe-industrial-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Anabibe-industrial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.Anabibe-industrial-content {
+  padding: 4em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Anabibe-red-bg {
+  background-color: var(--sntp-red);
+  color: var(--sntp-white);
+}
+
+.Anabibe-navy-bg {
+  background-color: var(--sntp-black);
+  color: var(--sntp-white);
+}
+
+.Anabibe-industrial-title,
+.Anabibe-complete-solutions-title,
+.Anabibe-resistance-title,
+.Anabibe-optimization-title {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--sntp-white);
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.Anabibe-industrial-divider,
+.Anabibe-complete-solutions-divider,
+.Anabibe-resistance-divider,
+.Anabibe-optimization-divider {
+  width: 95px;
+  height: 3.3px;
+  background: repeating-linear-gradient(
+    90deg,
+    #FFFFFF 0px,
+    #FFFFFF 12.2px,
+    transparent 12.2px,
+    transparent 18.7px
+  );
+  margin: 15px 0 20px 0;
+}
+
+.Anabibe-industrial-description,
+.Anabibe-complete-solutions-description,
+.Anabibe-resistance-description,
+.Anabibe-optimization-description {
+  font-family: 'Open Sans', Sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  color: var(--sntp-white);
+  margin-bottom: 2em;
+}
+
+.Anabibe-industrial-btn,
+.Anabibe-complete-solutions-btn,
+.Anabibe-resistance-btn,
+.Anabibe-optimization-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  background-color: transparent;
+  color: var(--sntp-white);
+  padding: 0.7em 1.5em;
+  border: 2px solid var(--sntp-white);
+  text-decoration: none;
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.Anabibe-industrial-btn:hover,
+.Anabibe-complete-solutions-btn:hover,
+.Anabibe-resistance-btn:hover,
+.Anabibe-optimization-btn:hover {
+  background-color: var(--sntp-white);
+  color: var(--sntp-black);
+}
+
+/* Solutions Complètes */
+.Anabibe-complete-solutions-section {
+  padding: 0;
+}
+
+.Anabibe-complete-solutions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.Anabibe-complete-solutions-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Anabibe-complete-solutions-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.Anabibe-complete-solutions-content {
+  padding: 4em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Résistance Certifiée */
+.Anabibe-resistance-section {
+  padding: 0;
+}
+
+.Anabibe-resistance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.Anabibe-resistance-content {
+  padding: 4em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Anabibe-resistance-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Anabibe-resistance-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Optimisation Logistique */
+.Anabibe-optimization-section {
+  padding: 0;
+}
+
+.Anabibe-optimization-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.Anabibe-optimization-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Anabibe-optimization-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.Anabibe-optimization-content {
+  padding: 4em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ====================
+   SECTION NOTRE OBJECTIF (avec barres de progression)
+==================== */
+.Anabibe-objective-section {
+  background-color: #F2F2F2;
+  padding: 100px 0;
+}
+
+.Anabibe-objective-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4em;
+  align-items: center;
+}
+
+.Anabibe-objective-text {
+  padding: 2em 0;
+}
+
+.Anabibe-objective-subtitle {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--sntp-gray);
+  margin-bottom: 0.3em;
+}
+
+.Anabibe-objective-title {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--sntp-text-dark);
+  margin-bottom: 0.3em;
+}
+
+.Anabibe-objective-divider {
+  width: 95px;
+  height: 3.3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--sntp-red) 0px,
+    var(--sntp-red) 12.2px,
+    transparent 12.2px,
+    transparent 18.7px
+  );
+  margin: 15px 0 20px 0;
+}
+
+.Anabibe-objective-description {
+  font-family: 'Open Sans', Sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  color: var(--sntp-gray-dark);
+  margin-bottom: 2em;
+}
+
+.Anabibe-objective-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  background-color: var(--sntp-red);
+  color: var(--sntp-white);
+  padding: 0.7em 1.8em;
+  text-decoration: none;
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.Anabibe-objective-btn:hover {
+  background-color: var(--sntp-red-dark);
+  transform: translateY(-2px);
+}
+
+.Anabibe-objective-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.Anabibe-progress-item {
+  width: 100%;
+}
+
+.Anabibe-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7em;
+}
+
+.Anabibe-progress-label {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--sntp-text-dark);
+}
+
+.Anabibe-progress-percentage {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--sntp-red);
+}
+
+.Anabibe-progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: #DDDDDD;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.Anabibe-progress-bar-fill {
+  height: 100%;
+  background-color: var(--sntp-red);
+  transition: width 1.5s ease;
+}
+
+/* ====================
+   SECTION RETROUVEZ-NOUS (Carte + Infos)
+==================== */
+.Anabibe-contact-section {
+  background-color: #F2F2F2;
+  padding: 100px 0;
+}
+
+.Anabibe-contact-title {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--sntp-text-dark);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.Anabibe-contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Google Map Container */
+.Anabibe-contact-map-container {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  border: 4px solid var(--sntp-red);
+}
+
+.Anabibe-google-map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: brightness(1.05) contrast(0.95) saturate(0.9);
+  transition: filter 0.3s ease;
+}
+
+.Anabibe-contact-map-container:hover .Anabibe-google-map {
+  filter: brightness(1) contrast(1) saturate(1);
+}
+
+/* Contact Information Wrapper */
+.Anabibe-contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  text-align: left;
+}
+
+.Anabibe-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.Anabibe-contact-item {
+  background: var(--sntp-white);
+  padding: 30px 28px;
+  border-radius: 0;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--sntp-red);
+}
+
+.Anabibe-contact-item:hover {
+  box-shadow: 0px 10px 25px rgba(193, 18, 31, 0.2);
+  transform: translateX(8px);
+  border-left-width: 6px;
+}
+
+.Anabibe-contact-label {
+  font-family: 'Rajdhani', Sans-serif;
+  font-size: 1.3rem;
+  color: var(--sntp-red);
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.Anabibe-contact-info {
+  font-family: 'Open Sans', Sans-serif;
+  font-size: 1.05rem;
+  color: var(--sntp-text-dark);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.Anabibe-contact-info a {
+  color: var(--sntp-text-dark);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.Anabibe-contact-info a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sntp-red);
+  transition: width 0.3s ease;
+}
+
+.Anabibe-contact-info a:hover {
+  color: var(--sntp-red);
+}
+
+.Anabibe-contact-info a:hover::after {
+  width: 100%;
+}
+
+/* Map Button */
+.Anabibe-map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px auto 0;
+  width: fit-content;
+}
+
+.Anabibe-map-button .btn-icon {
+  font-size: 1.1em;
+}
+
+.Anabibe-contact-cta-text {
+  font-family: 'Open Sans', Sans-serif;
+  font-size: 1.05rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.9;
+  padding: 28px;
+  background: white;
+  border-radius: 0;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.Anabibe-contact-cta-text strong {
+  color: var(--sntp-text-dark);
+  font-weight: 800;
+}
+
+/* ====================
+   RESPONSIVE DESIGN
+==================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .Anabibe-hero-section {
+    min-height: 550px;
+  }
+
+  .Anabibe-expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+
+  .Anabibe-expertise-image-center {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+  }
+
+  .Anabibe-solutions-layout,
+  .Anabibe-objective-layout,
+  .Anabibe-contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  .Anabibe-industrial-grid,
+  .Anabibe-complete-solutions-grid,
+  .Anabibe-resistance-grid,
+  .Anabibe-optimization-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .Anabibe-solutions-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .Anabibe-contact-map-container {
+    height: 450px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .Anabibe-hero-section {
+    min-height: 500px;
+  }
+
+  .Anabibe-hero-content {
+    padding: 1em;
+    text-align: center;
+  }
+
+  .Anabibe-hero-title {
+    font-size: 2.5em;
+  }
+
+  .Anabibe-hero-divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Anabibe-expertise-card {
+    padding: 2em 1em;
+  }
+
+  .Anabibe-solutions-title,
+  .Anabibe-objective-title {
+    font-size: 2em;
+  }
+
+  .Anabibe-industrial-title,
+  .Anabibe-complete-solutions-title,
+  .Anabibe-resistance-title,
+  .Anabibe-optimization-title {
+    font-size: 2em;
+  }
+
+  .Anabibe-industrial-content,
+  .Anabibe-complete-solutions-content,
+  .Anabibe-resistance-content,
+  .Anabibe-optimization-content {
+    padding: 2em 1.5em;
+  }
+
+  .Anabibe-contact-title {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .Anabibe-contact-map-container {
+    height: 400px;
+  }
+
+  .Anabibe-contact-info-wrapper {
+    text-align: center;
+  }
+
+  .Anabibe-contact-item {
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid var(--sntp-red);
+  }
+
+  .Anabibe-contact-item:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .Anabibe-hero-title {
+    font-size: 2em;
+  }
+
+  .Anabibe-solutions-title,
+  .Anabibe-objective-title,
+  .Anabibe-contact-title {
+    font-size: 1.8em;
+  }
+
+  .Anabibe-industrial-title,
+  .Anabibe-complete-solutions-title,
+  .Anabibe-resistance-title,
+  .Anabibe-optimization-title {
+    font-size: 1.8em;
+  }
+
+  .Anabibe-container {
+    padding: 0 1.5em;
+  }
+
+  .Anabibe-contact-map-container {
+    height: 350px;
+  }
+}
+
+/* ====================
+   FIX SCROLLBAR & OVERFLOW
+==================== */
+.Anabibe-page {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.Anabibe-container,
+.Anabibe-container-full,
+.Anabibe-expertise-grid,
+.Anabibe-solutions-layout,
+.Anabibe-contact-layout {
+  max-width: 100%;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--sntp-red);
+  color: var(--sntp-white);
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--sntp-red);
+  outline-offset: 2px;
+}
+

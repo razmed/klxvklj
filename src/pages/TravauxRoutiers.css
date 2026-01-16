@@ -1,0 +1,775 @@
+/* ====================
+   TRAVAUX ROUTIERS - PALETTE SNTP 100%
+==================== */
+
+:root {
+  /* Palette SNTP Officielle */
+  --sntp-red-darker: #5A000D;
+  --sntp-red-dark: #810012;
+  --sntp-red: #C1121F;
+  --sntp-red-light: #D32F2F;
+  
+  --sntp-black: #0D1B2A;
+  --sntp-gray-darkest: #1B263B;
+  --sntp-gray-dark: #415A77;
+  --sntp-gray: #778DA9;
+  --sntp-gray-light: #B0C4DE;
+  --sntp-gray-lighter: #E0E1DD;
+  --sntp-gray-lightest: #F5F5F5;
+  
+  --sntp-white: #FFFFFF;
+  --sntp-text-dark: #2C2C2C;
+}
+
+/* ==================== HERO SECTION ==================== */
+.TravauxRoutiers-hero {
+  position: relative;
+  min-height: 600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  margin-top: -120px;
+  padding-top: 120px;
+  overflow: hidden;
+}
+
+.TravauxRoutiers-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 27, 42, 0.75) 0%, rgba(13, 27, 42, 0.9) 100%);
+  z-index: 1;
+}
+
+.TravauxRoutiers-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  color: var(--sntp-white);
+  text-align: left;
+  animation: TravauxRoutiers-fadeInUp 1s ease-out;
+}
+
+@keyframes TravauxRoutiers-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.TravauxRoutiers-breadcrumb {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  text-transform: capitalize;
+}
+
+.TravauxRoutiers-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 3.5em;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--sntp-white);
+  margin-bottom: 0.6em;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.TravauxRoutiers-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 750px;
+}
+
+/* ==================== MISSION PRINCIPALE ==================== */
+.TravauxRoutiers-mission-section {
+  background-color: var(--sntp-black);
+  padding: 0;
+  margin-top: -100px;
+  position: relative;
+  z-index: 10;
+}
+
+.TravauxRoutiers-mission-card {
+  background-color: var(--sntp-white);
+  padding: 4em 3em;
+  border-radius: 0;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.TravauxRoutiers-mission-header {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.TravauxRoutiers-mission-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5em;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.TravauxRoutiers-mission-icon svg {
+  font-size: 34px;
+  color: var(--sntp-white);
+}
+
+.TravauxRoutiers-mission-subtitle {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--sntp-gray-dark);
+  margin-bottom: 0.5em;
+}
+
+.TravauxRoutiers-mission-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2.8em;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--sntp-text-dark);
+  margin-bottom: 0.8em;
+}
+
+.TravauxRoutiers-mission-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.7em;
+  color: var(--sntp-gray-dark);
+  max-width: 800px;
+  margin: 0 auto 2em;
+}
+
+.TravauxRoutiers-mission-description strong {
+  color: var(--sntp-text-dark);
+  font-weight: 700;
+}
+
+/* Cartes d'expertise */
+.TravauxRoutiers-expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin-top: 3em;
+}
+
+.TravauxRoutiers-expertise-card {
+  text-align: center;
+  padding: 0;
+}
+
+.TravauxRoutiers-expertise-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.2em;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--sntp-red);
+}
+
+.TravauxRoutiers-expertise-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--sntp-text-dark);
+  margin-bottom: 0.7em;
+}
+
+.TravauxRoutiers-expertise-desc {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6em;
+  color: var(--sntp-gray-dark);
+}
+
+/* ==================== SPÉCIALITÉ SECTION ==================== */
+.TravauxRoutiers-specialite-section {
+  background-color: var(--sntp-white);
+  padding: 120px 0;
+}
+
+.TravauxRoutiers-specialite-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+  align-items: center;
+}
+
+.TravauxRoutiers-specialite-image-wrapper {
+  position: relative;
+}
+
+.TravauxRoutiers-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.TravauxRoutiers-specialite-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  display: block;
+}
+
+.TravauxRoutiers-image-container:hover .TravauxRoutiers-specialite-img {
+  transform: scale(1.05);
+}
+
+.TravauxRoutiers-specialite-content {
+  padding: 0;
+}
+
+.TravauxRoutiers-section-subtitle {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sntp-red);
+  margin-bottom: 0.5em;
+  letter-spacing: 2px;
+}
+
+.TravauxRoutiers-section-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2.8em;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--sntp-text-dark);
+  margin-bottom: 0.8em;
+  line-height: 1.2;
+}
+
+.TravauxRoutiers-section-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.05em;
+  line-height: 1.8em;
+  color: var(--sntp-gray-dark);
+  margin-bottom: 2em;
+}
+
+.TravauxRoutiers-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.TravauxRoutiers-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  color: var(--sntp-text-dark);
+}
+
+.TravauxRoutiers-feature-bullet {
+  color: var(--sntp-red);
+  font-size: 1.2em;
+}
+
+/* ==================== DÉSENCLAVER SECTION ==================== */
+.TravauxRoutiers-desenclaver-section {
+  background-color: var(--sntp-gray-lightest);
+  padding: 120px 0;
+}
+
+.TravauxRoutiers-desenclaver-header {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+.TravauxRoutiers-desenclaver-subtitle {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sntp-red);
+  margin-bottom: 0.5em;
+  letter-spacing: 2px;
+}
+
+.TravauxRoutiers-desenclaver-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--sntp-text-dark);
+  margin-bottom: 0.5em;
+}
+
+.TravauxRoutiers-section-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--sntp-red), transparent);
+  margin: 1em auto;
+}
+
+.TravauxRoutiers-desenclaver-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 4em;
+  align-items: flex-start;
+}
+
+.TravauxRoutiers-desenclaver-image-col {
+  position: sticky;
+  top: 100px;
+}
+
+.TravauxRoutiers-desenclaver-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.TravauxRoutiers-desenclaver-text-col {
+  padding: 0;
+}
+
+.TravauxRoutiers-desenclaver-text-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--sntp-text-dark);
+  margin-bottom: 1.5em;
+  line-height: 1.3;
+}
+
+.TravauxRoutiers-desenclaver-paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.8em;
+  color: var(--sntp-gray-dark);
+  margin-bottom: 1.5em;
+}
+
+/* Barres de progression */
+.TravauxRoutiers-progress-container {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.TravauxRoutiers-progress-item {
+  width: 100%;
+}
+
+.TravauxRoutiers-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8em;
+}
+
+.TravauxRoutiers-progress-label {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--sntp-text-dark);
+}
+
+.TravauxRoutiers-progress-percentage {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--sntp-red);
+}
+
+.TravauxRoutiers-progress-bar-bg {
+  width: 100%;
+  height: 10px;
+  background-color: var(--sntp-gray-lighter);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.TravauxRoutiers-progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 5px;
+  transition: width 1.5s ease;
+}
+
+/* ==================== CAPACITÉ SECTION ==================== */
+.TravauxRoutiers-capacite-section {
+  background-color: var(--sntp-black);
+  padding: 120px 0;
+  position: relative;
+}
+
+.TravauxRoutiers-capacite-header {
+  max-width: 900px;
+  margin-bottom: 4em;
+}
+
+.TravauxRoutiers-capacite-subtitle {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5em;
+  letter-spacing: 2px;
+}
+
+.TravauxRoutiers-capacite-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--sntp-white);
+  margin-bottom: 0.8em;
+}
+
+.TravauxRoutiers-capacite-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.05em;
+  line-height: 1.8em;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2em;
+}
+
+.TravauxRoutiers-capacite-description strong {
+  color: var(--sntp-white);
+  font-weight: 700;
+}
+
+.TravauxRoutiers-capacite-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.TravauxRoutiers-capacite-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  color: var(--sntp-white);
+}
+
+.TravauxRoutiers-capacite-check {
+  color: var(--sntp-red);
+  font-size: 1.2em;
+}
+
+.TravauxRoutiers-capacite-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  margin-top: 3em;
+}
+
+.TravauxRoutiers-capacite-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  height: 250px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.TravauxRoutiers-capacite-card:hover {
+  transform: translateY(-8px);
+}
+
+.TravauxRoutiers-capacite-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.TravauxRoutiers-capacite-card:hover .TravauxRoutiers-capacite-card-img {
+  transform: scale(1.1);
+}
+
+.TravauxRoutiers-capacite-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  padding: 2em 1.5em;
+}
+
+.TravauxRoutiers-capacite-card-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--sntp-white);
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* ==================== CTA FINALE ==================== */
+.TravauxRoutiers-cta-finale {
+  background: linear-gradient(135deg, var(--sntp-red) 0%, var(--sntp-red-dark) 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.TravauxRoutiers-cta-finale::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.TravauxRoutiers-cta-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.TravauxRoutiers-cta-pretitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.5em;
+  text-transform: capitalize;
+}
+
+.TravauxRoutiers-cta-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 3.5em;
+  font-weight: 900;
+  color: var(--sntp-white);
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.TravauxRoutiers-cta-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.7em;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5em;
+}
+
+.TravauxRoutiers-cta-buttons {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.TravauxRoutiers-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 35px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.TravauxRoutiers-cta-btn-primary {
+  background-color: var(--sntp-white);
+  color: var(--sntp-red);
+  border: 2px solid var(--sntp-white);
+}
+
+.TravauxRoutiers-cta-btn-primary:hover {
+  background-color: transparent;
+  color: var(--sntp-white);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.TravauxRoutiers-cta-btn-outline {
+  background-color: transparent;
+  color: var(--sntp-white);
+  border: 2px solid var(--sntp-white);
+}
+
+.TravauxRoutiers-cta-btn-outline:hover {
+  background-color: var(--sntp-white);
+  color: var(--sntp-red);
+  transform: translateY(-2px);
+}
+
+.TravauxRoutiers-cta-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* ==================== CONTAINER & UTILITIES ==================== */
+.TravauxRoutiers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .TravauxRoutiers-hero {
+    min-height: 550px;
+    margin-top: -80px;
+    padding-top: 80px;
+  }
+
+  .TravauxRoutiers-title {
+    font-size: 2.8em;
+  }
+
+  .TravauxRoutiers-expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+
+  .TravauxRoutiers-specialite-grid {
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  .TravauxRoutiers-specialite-image-wrapper {
+    order: -1;
+  }
+
+  .TravauxRoutiers-desenclaver-grid {
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  .TravauxRoutiers-desenclaver-image-col {
+    position: relative;
+    top: 0;
+  }
+
+  .TravauxRoutiers-capacite-features-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .TravauxRoutiers-hero {
+    min-height: 500px;
+  }
+
+  .TravauxRoutiers-title {
+    font-size: 2.2em;
+  }
+
+  .TravauxRoutiers-mission-card {
+    padding: 3em 2em;
+  }
+
+  .TravauxRoutiers-mission-title {
+    font-size: 2.3em;
+  }
+
+  .TravauxRoutiers-section-title,
+  .TravauxRoutiers-desenclaver-title,
+  .TravauxRoutiers-capacite-title {
+    font-size: 2.3em;
+  }
+
+  .TravauxRoutiers-capacite-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .TravauxRoutiers-cta-title {
+    font-size: 2.5em;
+  }
+
+  .TravauxRoutiers-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .TravauxRoutiers-specialite-section,
+  .TravauxRoutiers-desenclaver-section,
+  .TravauxRoutiers-capacite-section,
+  .TravauxRoutiers-cta-finale {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .TravauxRoutiers-title {
+    font-size: 1.8em;
+  }
+
+  .TravauxRoutiers-mission-title {
+    font-size: 2em;
+  }
+
+  .TravauxRoutiers-section-title,
+  .TravauxRoutiers-desenclaver-title,
+  .TravauxRoutiers-capacite-title {
+    font-size: 2em;
+  }
+
+  .TravauxRoutiers-cta-title {
+    font-size: 2em;
+  }
+
+  .TravauxRoutiers-cta-btn {
+    padding: 14px 28px;
+    font-size: 0.9em;
+  }
+
+  .TravauxRoutiers-container {
+    padding: 0 1.5em;
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: var(--sntp-red);
+  color: var(--sntp-white);
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--sntp-red);
+  outline-offset: 2px;
+}
+

@@ -1,0 +1,607 @@
+/* ====================
+   BÂTIMENTS INDUSTRIELS - PALETTE SNTP 100%
+==================== */
+
+:root {
+  /* Palette SNTP Officielle */
+  --sntp-red-darker: #5A000D;
+  --sntp-red-dark: #810012;
+  --sntp-red: #C1121F;
+  --sntp-red-light: #D32F2F;
+  
+  --sntp-black: #0D1B2A;
+  --sntp-gray-darkest: #1B263B;
+  --sntp-gray-dark: #415A77;
+  --sntp-gray: #778DA9;
+  --sntp-gray-light: #B0C4DE;
+  --sntp-gray-lighter: #E0E1DD;
+  --sntp-gray-lightest: #F5F5F5;
+  
+  --sntp-white: #FFFFFF;
+  --sntp-text-dark: #2C2C2C;
+}
+
+.BatimentsIndustriels-page {
+  background-color: var(--sntp-gray-lightest);
+  color: var(--sntp-black);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+/* ==================== HERO ==================== */
+.BatimentsIndustriels-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--sntp-white);
+}
+
+.BatimentsIndustriels-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(13, 27, 42, 0.85));
+}
+
+.BatimentsIndustriels-hero-content {
+  position: relative;
+  padding: 4.5rem 1.5rem;
+  max-width: 960px;
+  z-index: 2;
+}
+
+.BatimentsIndustriels-hero-kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--sntp-gray);
+  margin-bottom: 0.8rem;
+}
+
+.BatimentsIndustriels-hero-title {
+  display: inline-block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--sntp-red);
+  margin-bottom: 1.2rem;
+}
+
+.BatimentsIndustriels-hero-subtitle {
+  font-size: 1.05rem;
+  max-width: 680px;
+  line-height: 1.8;
+  color: #e5e5e5;
+  margin-bottom: 0;
+}
+
+.BatimentsIndustriels-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* ==================== BOUTONS ==================== */
+.BatimentsIndustriels-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.BatimentsIndustriels-btn-primary {
+  background-color: var(--sntp-red);
+  border-color: var(--sntp-red);
+  color: var(--sntp-white);
+  box-shadow: 0 10px 28px rgba(193, 18, 31, 0.5);
+}
+
+.BatimentsIndustriels-btn-primary:hover {
+  background-color: var(--sntp-red-dark);
+  border-color: var(--sntp-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(129, 0, 18, 0.65);
+}
+
+.BatimentsIndustriels-btn-outline {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.45);
+  color: var(--sntp-white);
+}
+
+.BatimentsIndustriels-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.BatimentsIndustriels-btn-outline-light {
+  background-color: transparent;
+  border-color: var(--sntp-white);
+  color: var(--sntp-white);
+}
+
+.BatimentsIndustriels-btn-outline-light:hover {
+  background-color: var(--sntp-white);
+  color: var(--sntp-red);
+  transform: translateY(-2px);
+}
+
+/* ==================== SECTIONS ==================== */
+.BatimentsIndustriels-section {
+  padding: 4.5rem 1.5rem;
+}
+
+.BatimentsIndustriels-section:nth-of-type(odd) {
+  background-color: var(--sntp-white);
+}
+
+.BatimentsIndustriels-section:nth-of-type(even) {
+  background-color: var(--sntp-gray-lightest);
+}
+
+.BatimentsIndustriels-section-header {
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+.BatimentsIndustriels-section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sntp-black);
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.BatimentsIndustriels-section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.4rem;
+  width: 64px;
+  height: 3px;
+  background: var(--sntp-red);
+}
+
+.BatimentsIndustriels-section-subtitle {
+  margin-top: 1.4rem;
+  font-size: 0.98rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+}
+
+/* ==================== INTRO ==================== */
+.BatimentsIndustriels-intro {
+  padding-top: 3.5rem;
+}
+
+.BatimentsIndustriels-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.BatimentsIndustriels-intro-card {
+  background-color: var(--sntp-white);
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  border: 1px solid var(--sntp-gray-lighter);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.BatimentsIndustriels-intro-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(193, 18, 31, 0.08), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.BatimentsIndustriels-intro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.14);
+  border-color: rgba(193, 18, 31, 0.5);
+}
+
+.BatimentsIndustriels-intro-card:hover::before {
+  opacity: 1;
+}
+
+.BatimentsIndustriels-intro-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 0.75rem;
+  color: var(--sntp-white);
+  margin-bottom: 1.2rem;
+}
+
+.BatimentsIndustriels-intro-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.BatimentsIndustriels-intro-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--sntp-gray-darkest);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.BatimentsIndustriels-intro-text {
+  font-size: 0.96rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+}
+
+/* ==================== PROJETS ==================== */
+.BatimentsIndustriels-projects {
+  background-image: radial-gradient(circle at top left, #ffffff, #f5f5f5);
+}
+
+.BatimentsIndustriels-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+}
+
+.BatimentsIndustriels-project-card {
+  background-color: var(--sntp-white);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--sntp-gray-lighter);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.BatimentsIndustriels-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.16);
+}
+
+.BatimentsIndustriels-project-header {
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  padding: 1.5rem 1.75rem;
+  color: var(--sntp-white);
+}
+
+.BatimentsIndustriels-project-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+
+.BatimentsIndustriels-project-location {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+}
+
+.BatimentsIndustriels-project-content {
+  padding: 1.75rem;
+}
+
+.BatimentsIndustriels-project-desc {
+  font-size: 0.96rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.BatimentsIndustriels-project-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.BatimentsIndustriels-project-specs li {
+  font-size: 0.94rem;
+  color: var(--sntp-gray-dark);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--sntp-gray-lighter);
+}
+
+.BatimentsIndustriels-project-specs li:last-child {
+  border-bottom: none;
+}
+
+.BatimentsIndustriels-project-specs strong {
+  color: var(--sntp-gray-darkest);
+  font-weight: 600;
+}
+
+/* ==================== TYPES ==================== */
+.BatimentsIndustriels-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.BatimentsIndustriels-type-card {
+  background-color: var(--sntp-white);
+  border-radius: 1rem;
+  padding: 2rem 1.8rem;
+  border: 1px solid var(--sntp-gray-lighter);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.BatimentsIndustriels-type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.14);
+  border-color: rgba(193, 18, 31, 0.4);
+}
+
+.BatimentsIndustriels-type-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sntp-gray-darkest);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.BatimentsIndustriels-type-text {
+  font-size: 0.96rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+}
+
+/* ==================== EXPERTISE ==================== */
+.BatimentsIndustriels-expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.BatimentsIndustriels-expertise-item {
+  background-color: var(--sntp-white);
+  border-radius: 1rem;
+  padding: 2rem 1.8rem;
+  border: 1px solid var(--sntp-gray-lighter);
+  position: relative;
+  overflow: hidden;
+}
+
+.BatimentsIndustriels-expertise-number {
+  position: absolute;
+  top: -0.5rem;
+  right: 1.5rem;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(193, 18, 31, 0.08);
+  line-height: 1;
+}
+
+.BatimentsIndustriels-expertise-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sntp-gray-darkest);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  position: relative;
+  z-index: 1;
+}
+
+.BatimentsIndustriels-expertise-text {
+  font-size: 0.96rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== ADVANTAGES ==================== */
+.BatimentsIndustriels-advantages {
+  background-color: var(--sntp-black);
+  color: var(--sntp-white);
+}
+
+.BatimentsIndustriels-advantages .BatimentsIndustriels-section-title {
+  color: var(--sntp-white);
+}
+
+.BatimentsIndustriels-advantages .BatimentsIndustriels-section-subtitle {
+  color: var(--sntp-gray);
+}
+
+.BatimentsIndustriels-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.BatimentsIndustriels-advantage-card {
+  background: linear-gradient(135deg, #1B263B, #2d2d2d);
+  border-radius: 1rem;
+  padding: 2rem 1.8rem;
+  border: 1px solid rgba(224, 225, 221, 0.15);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.BatimentsIndustriels-advantage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(193, 18, 31, 0.35);
+}
+
+.BatimentsIndustriels-advantage-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sntp-red);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.BatimentsIndustriels-advantage-text {
+  font-size: 0.96rem;
+  color: #e5e5e5;
+  line-height: 1.8;
+}
+
+/* ==================== CTA ==================== */
+.BatimentsIndustriels-cta {
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-black));
+  color: var(--sntp-white);
+}
+
+.BatimentsIndustriels-cta-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.BatimentsIndustriels-cta-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.7rem;
+}
+
+.BatimentsIndustriels-cta-subtitle {
+  font-size: 0.98rem;
+  color: #f3f4f6;
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.BatimentsIndustriels-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* ==================== CONTAINER ==================== */
+.BatimentsIndustriels-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .BatimentsIndustriels-hero {
+    min-height: 55vh;
+  }
+
+  .BatimentsIndustriels-intro-grid,
+  .BatimentsIndustriels-types-grid,
+  .BatimentsIndustriels-expertise-grid,
+  .BatimentsIndustriels-advantages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .BatimentsIndustriels-projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .BatimentsIndustriels-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .BatimentsIndustriels-hero-content {
+    padding: 3.5rem 1rem;
+  }
+
+  .BatimentsIndustriels-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .BatimentsIndustriels-intro-grid,
+  .BatimentsIndustriels-types-grid,
+  .BatimentsIndustriels-expertise-grid,
+  .BatimentsIndustriels-advantages-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .BatimentsIndustriels-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .BatimentsIndustriels-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .BatimentsIndustriels-cta-actions {
+    width: 100%;
+  }
+
+  .BatimentsIndustriels-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .BatimentsIndustriels-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .BatimentsIndustriels-section-title {
+    font-size: 1.6rem;
+  }
+
+  .BatimentsIndustriels-cta-title {
+    font-size: 1.4rem;
+  }
+
+  .BatimentsIndustriels-projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .BatimentsIndustriels-project-card {
+    min-width: 100%;
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: var(--sntp-red);
+  color: var(--sntp-white);
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--sntp-red);
+  outline-offset: 2px;
+}
+

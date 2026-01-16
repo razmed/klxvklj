@@ -1,0 +1,586 @@
+/* ====================
+   GÉNIE CIVIL - PALETTE SNTP 100%
+==================== */
+
+:root {
+  /* Palette SNTP Officielle */
+  --sntp-red-darker: #5A000D;
+  --sntp-red-dark: #810012;
+  --sntp-red: #C1121F;
+  --sntp-red-light: #D32F2F;
+  
+  --sntp-black: #0D1B2A;
+  --sntp-gray-darkest: #1B263B;
+  --sntp-gray-dark: #415A77;
+  --sntp-gray: #778DA9;
+  --sntp-gray-light: #B0C4DE;
+  --sntp-gray-lighter: #E0E1DD;
+  --sntp-gray-lightest: #F5F5F5;
+  
+  --sntp-white: #FFFFFF;
+  --sntp-text-dark: #2C2C2C;
+}
+
+.GenieCivil-page {
+  background-color: var(--sntp-gray-lightest);
+  color: var(--sntp-black);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+/* ==================== HERO ==================== */
+.GenieCivil-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--sntp-white);
+}
+
+.GenieCivil-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13, 27, 42, 0.88), rgba(13, 27, 42, 0.82));
+}
+
+.GenieCivil-hero-content {
+  position: relative;
+  padding: 4.5rem 1.5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.GenieCivil-hero-kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--sntp-gray);
+  margin-bottom: 0.8rem;
+}
+
+.GenieCivil-hero-title {
+  display: inline-block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--sntp-red);
+  margin-bottom: 1.2rem;
+}
+
+.GenieCivil-hero-subtitle {
+  font-size: 1.05rem;
+  max-width: 680px;
+  line-height: 1.8;
+  color: #e5e5e5;
+  margin-bottom: 0;
+}
+
+.GenieCivil-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* ==================== BOUTONS ==================== */
+.GenieCivil-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.GenieCivil-btn-primary {
+  background-color: var(--sntp-red);
+  border-color: var(--sntp-red);
+  color: var(--sntp-white);
+  box-shadow: 0 10px 28px rgba(193, 18, 31, 0.5);
+}
+
+.GenieCivil-btn-primary:hover {
+  background-color: var(--sntp-red-dark);
+  border-color: var(--sntp-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(129, 0, 18, 0.65);
+}
+
+.GenieCivil-btn-outline {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.45);
+  color: var(--sntp-white);
+}
+
+.GenieCivil-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.GenieCivil-btn-outline-light {
+  background-color: transparent;
+  border-color: var(--sntp-white);
+  color: var(--sntp-white);
+}
+
+.GenieCivil-btn-outline-light:hover {
+  background-color: var(--sntp-white);
+  color: var(--sntp-red);
+  transform: translateY(-2px);
+}
+
+/* ==================== SECTIONS ==================== */
+.GenieCivil-section {
+  padding: 4.5rem 1.5rem;
+}
+
+.GenieCivil-section:nth-of-type(odd) {
+  background-color: var(--sntp-white);
+}
+
+.GenieCivil-section:nth-of-type(even) {
+  background-color: var(--sntp-gray-lightest);
+}
+
+.GenieCivil-section-header {
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+.GenieCivil-section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sntp-black);
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.GenieCivil-section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.4rem;
+  width: 64px;
+  height: 3px;
+  background: var(--sntp-red);
+}
+
+.GenieCivil-section-subtitle {
+  margin-top: 1.4rem;
+  font-size: 0.98rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+}
+
+/* ==================== INTRO ==================== */
+.GenieCivil-intro {
+  padding-top: 3.5rem;
+}
+
+.GenieCivil-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.GenieCivil-intro-card {
+  background-color: var(--sntp-white);
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  border: 1px solid var(--sntp-gray-lighter);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.GenieCivil-intro-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(193, 18, 31, 0.08), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.GenieCivil-intro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.14);
+  border-color: rgba(193, 18, 31, 0.5);
+}
+
+.GenieCivil-intro-card:hover::before {
+  opacity: 1;
+}
+
+.GenieCivil-intro-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  border-radius: 0.75rem;
+  color: var(--sntp-white);
+  margin-bottom: 1.2rem;
+}
+
+.GenieCivil-intro-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.GenieCivil-intro-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--sntp-gray-darkest);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.GenieCivil-intro-text {
+  font-size: 0.96rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+}
+
+/* ==================== DOMAINES ==================== */
+.GenieCivil-domains {
+  background-image: radial-gradient(circle at top left, #ffffff, #f5f5f5);
+}
+
+.GenieCivil-domains-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.GenieCivil-domain-card {
+  background-color: var(--sntp-white);
+  border-radius: 1rem;
+  padding: 2rem 1.8rem;
+  border: 1px solid var(--sntp-gray-lighter);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.GenieCivil-domain-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(193, 18, 31, 0.9));
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.GenieCivil-domain-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.16);
+  border-color: rgba(13, 27, 42, 0.9);
+}
+
+.GenieCivil-domain-card:hover::before {
+  opacity: 0.07;
+}
+
+.GenieCivil-domain-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sntp-gray-darkest);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.GenieCivil-domain-text {
+  font-size: 0.96rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+}
+
+/* ==================== MÉTHODOLOGIE TIMELINE ==================== */
+.GenieCivil-methodology-timeline {
+  max-width: 880px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.GenieCivil-methodology-timeline::before {
+  content: "";
+  position: absolute;
+  left: 48px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--sntp-red), var(--sntp-gray-lighter));
+}
+
+.GenieCivil-timeline-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.GenieCivil-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.GenieCivil-timeline-marker {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-red-dark));
+  color: var(--sntp-white);
+  font-size: 1.6rem;
+  font-weight: 800;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(193, 18, 31, 0.5);
+  z-index: 1;
+}
+
+.GenieCivil-timeline-content {
+  flex: 1;
+  background-color: var(--sntp-white);
+  border-radius: 1rem;
+  padding: 1.8rem;
+  border: 1px solid var(--sntp-gray-lighter);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+.GenieCivil-timeline-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--sntp-gray-darkest);
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.GenieCivil-timeline-text {
+  font-size: 0.96rem;
+  color: var(--sntp-gray-dark);
+  line-height: 1.8;
+}
+
+/* ==================== STATS ==================== */
+.GenieCivil-stats {
+  background-color: var(--sntp-black);
+  color: var(--sntp-white);
+}
+
+.GenieCivil-stats .GenieCivil-section-title {
+  color: var(--sntp-white);
+}
+
+.GenieCivil-stats .GenieCivil-section-subtitle {
+  color: var(--sntp-gray);
+}
+
+.GenieCivil-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.GenieCivil-stat-card {
+  background: linear-gradient(135deg, #1B263B, #2d2d2d);
+  border-radius: 1rem;
+  padding: 2rem 1.8rem;
+  border: 1px solid rgba(224, 225, 221, 0.15);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.GenieCivil-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(193, 18, 31, 0.35);
+}
+
+.GenieCivil-stat-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--sntp-red);
+  margin-bottom: 0.4rem;
+}
+
+.GenieCivil-stat-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--sntp-gray);
+  margin-bottom: 0.6rem;
+}
+
+.GenieCivil-stat-desc {
+  font-size: 0.94rem;
+  color: #e5e5e5;
+  line-height: 1.8;
+}
+
+/* ==================== CTA ==================== */
+.GenieCivil-cta {
+  background: linear-gradient(135deg, var(--sntp-red), var(--sntp-black));
+  color: var(--sntp-white);
+}
+
+.GenieCivil-cta-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.GenieCivil-cta-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.7rem;
+}
+
+.GenieCivil-cta-subtitle {
+  font-size: 0.98rem;
+  color: #f3f4f6;
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.GenieCivil-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* ==================== CONTAINER ==================== */
+.GenieCivil-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .GenieCivil-hero {
+    min-height: 55vh;
+  }
+
+  .GenieCivil-intro-grid,
+  .GenieCivil-domains-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .GenieCivil-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .GenieCivil-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .GenieCivil-hero-content {
+    padding: 3.5rem 1rem;
+  }
+
+  .GenieCivil-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .GenieCivil-intro-grid,
+  .GenieCivil-domains-grid,
+  .GenieCivil-stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .GenieCivil-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .GenieCivil-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .GenieCivil-methodology-timeline::before {
+    left: 36px;
+  }
+
+  .GenieCivil-timeline-marker {
+    width: 72px;
+    height: 72px;
+    font-size: 1.3rem;
+  }
+
+  .GenieCivil-timeline-item {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .GenieCivil-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .GenieCivil-section-title {
+    font-size: 1.6rem;
+  }
+
+  .GenieCivil-cta-title {
+    font-size: 1.4rem;
+  }
+
+  .GenieCivil-timeline-marker {
+    width: 60px;
+    height: 60px;
+    font-size: 1.1rem;
+  }
+
+  .GenieCivil-timeline-item {
+    gap: 1rem;
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: var(--sntp-red);
+  color: var(--sntp-white);
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--sntp-red);
+  outline-offset: 2px;
+}
+
